@@ -1,5 +1,5 @@
 resource "aws_security_group" "ecs-securitygroup" {
-  vpc_id      = "vpc-4138e427"
+  vpc_id      = "vpc-xxx"
   name        = "ecs"
   description = "security group for ecs"
   egress {
@@ -31,7 +31,7 @@ resource "aws_security_group" "ecs-securitygroup" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["80.111.19.225/32"]
+    cidr_blocks = ["x.x.x.x/32"]
   }
   tags = {
     Name = "ecs"
@@ -39,7 +39,7 @@ resource "aws_security_group" "ecs-securitygroup" {
 }
 
 resource "aws_security_group" "myapp-elb-securitygroup" {
-  vpc_id      = "vpc-4138e427"
+  vpc_id      = "vpc-xxx"
   name        = "myapp-elb"
   description = "security group for ecs"
   egress {
@@ -53,7 +53,7 @@ resource "aws_security_group" "myapp-elb-securitygroup" {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = ["80.111.19.225/32"]
+    cidr_blocks = ["x.x.x.x/32"]
   }
   tags = {
     Name = "myapp-elb"
@@ -61,7 +61,7 @@ resource "aws_security_group" "myapp-elb-securitygroup" {
 }
 
 resource "aws_security_group" "dd-agent-elb-securitygroup" {
-  vpc_id      = "vpc-4138e427"
+  vpc_id      = "vpc-xxx"
   name        = "dd-agent-elb"
   description = "security group for dd-agent"
   egress {
