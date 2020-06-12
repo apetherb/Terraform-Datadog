@@ -12,7 +12,7 @@
 
 # Subnets
 resource "aws_subnet" "main-public-1" {
-  vpc_id                  = "vpc-4138e427"
+  vpc_id                  = "vpc-xxxx"
   cidr_block              = "10.0.3.0/24"
   map_public_ip_on_launch = "true"
   availability_zone       = "eu-west-1a"
@@ -23,7 +23,7 @@ resource "aws_subnet" "main-public-1" {
 }
 
 resource "aws_subnet" "main-public-2" {
-  vpc_id                  = "vpc-4138e427"
+  vpc_id                  = "vpc-xxx"
   cidr_block              = "10.0.4.0/24"
   map_public_ip_on_launch = "true"
   availability_zone       = "eu-west-1b"
@@ -34,7 +34,7 @@ resource "aws_subnet" "main-public-2" {
 }
 
 resource "aws_subnet" "main-public-3" {
-  vpc_id                  = "vpc-4138e427"
+  vpc_id                  = "vpc-xxx"
   cidr_block              = "10.0.5.0/24"
   map_public_ip_on_launch = "true"
   availability_zone       = "eu-west-1c"
@@ -45,7 +45,7 @@ resource "aws_subnet" "main-public-3" {
 }
 
 resource "aws_subnet" "main-private-1" {
-  vpc_id                  = "vpc-4138e427"
+  vpc_id                  = "vpc-xxx"
   cidr_block              = "10.0.6.0/24"
   map_public_ip_on_launch = "false"
   availability_zone       = "eu-west-1a"
@@ -56,7 +56,7 @@ resource "aws_subnet" "main-private-1" {
 }
 
 resource "aws_subnet" "main-private-2" {
-  vpc_id                  = "vpc-4138e427"
+  vpc_id                  = "vpc-xxx"
   cidr_block              = "10.0.7.0/24"
   map_public_ip_on_launch = "false"
   availability_zone       = "eu-west-1b"
@@ -67,7 +67,7 @@ resource "aws_subnet" "main-private-2" {
 }
 
 resource "aws_subnet" "main-private-3" {
-  vpc_id                  = "vpc-4138e427"
+  vpc_id                  = "vpc-xxx"
   cidr_block              = "10.0.8.0/24"
   map_public_ip_on_launch = "false"
   availability_zone       = "eu-west-1c"
@@ -79,7 +79,7 @@ resource "aws_subnet" "main-private-3" {
 
 # Internet GW
 #resource "aws_internet_gateway" "main-gw" {
-#  vpc_id = "vpc-4138e427"
+#  vpc_id = "vpc-xxx"
 #
 #  tags = {
 #    Name = "main"
@@ -88,10 +88,10 @@ resource "aws_subnet" "main-private-3" {
 
 # route tables
 resource "aws_route_table" "main-public" {
-  vpc_id = "vpc-4138e427"
+  vpc_id = "vpc-xxx"
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = "igw-6a8c080d"
+    gateway_id = "igw-xxx"
   }
 
   tags = {
