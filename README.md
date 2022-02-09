@@ -1,6 +1,6 @@
 # Terraform-Datadog
 
-Use Terraform to rollout out AWS infrastructure monitored by Datadog. 
+Use Terraform to rollout AWS infrastructure monitored by Datadog. 
 
 Use Cases:  
 Datadog/AWS Integration. 
